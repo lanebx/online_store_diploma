@@ -1,0 +1,90 @@
+
+$baseColorIcon: rgb(131, 131, 131);
+$hoverColorIcon: rgb(143, 143, 143);
+$baseColorText: rgb(131, 131, 131);
+$baseBgColor: rgb(255, 255, 255);
+
+
+.admin-button{
+    >*{
+        width: 24px;
+        height: 24px;
+
+        &:hover{
+            cursor: pointer;
+            font-weight: bold;
+        }
+    }
+}
+
+.back{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.35);
+    .modal-add-news {
+        width: 40vw;
+        min-width: 380px;
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: beige;
+        border: 2px solid rgba(104, 104, 104); /*  рамка */
+        border-radius: 10px;   /* Радиус скругления */
+
+        >.close{
+            padding-top: 3px;
+            >.icon-cross{
+                position: absolute;
+                right: 5%;
+            }
+            .icon-cross:hover {
+                color: rgb(216, 216, 216);
+                cursor: pointer;
+            }
+            .icon-cross:hover:active {
+                color: rgb(177, 177, 177);
+            }
+        }
+        >input,
+        >textarea{
+            height: 25px;
+            border: none;
+            resize: vertical;
+            background-color: $baseBgColor;
+            color: $baseColorText;
+            letter-spacing: 2px;
+            border: 0.4px solid $baseColorText; /*  рамка */
+            &:focus {
+                outline: none;
+                border: 0.5px solid $baseColorText;
+            }
+        }
+        >textarea{
+            height: 100px;
+        }
+
+        >.file{
+            >input[type="file"]{
+                display: none;
+            }
+        }
+        >* {
+            margin-bottom: 10px;
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
+
+.incorrect {
+    color: rgb(36, 17, 17) !important;
+    background-color: rgba(218, 123, 123, 0.3) !important;
+}

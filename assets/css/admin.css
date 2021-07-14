@@ -1,0 +1,94 @@
+@charset "UTF-8";
+.admin-button > * {
+  width: 24px;
+  height: 24px;
+}
+
+.admin-button > *:hover {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.back {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.35);
+}
+
+.back .modal-add-news {
+  width: 40vw;
+  min-width: 380px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: beige;
+  border: 2px solid rgba(104, 104, 104, 0.35);
+  /*  рамка */
+  border-radius: 10px;
+  /* Радиус скругления */
+}
+
+.back .modal-add-news > .close > .icon-cross {
+  position: absolute;
+  right: 5%;
+}
+
+.back .modal-add-news > .close .icon-cross:hover {
+  color: #d8d8d8;
+  cursor: pointer;
+}
+
+.back .modal-add-news > .close .icon-cross:hover:active {
+  color: #b1b1b1;
+}
+
+.back .modal-add-news > input,
+.back .modal-add-news > textarea {
+  height: 25px;
+  border: none;
+  resize: vertical;
+  background-color: white;
+  color: #838383;
+  letter-spacing: 2px;
+  border: 0.4px solid #838383;
+  /*  рамка */
+}
+
+.back .modal-add-news > input:focus,
+.back .modal-add-news > textarea:focus {
+  outline: none;
+  border: 0.5px solid #838383;
+}
+
+.back .modal-add-news > textarea {
+  height: 100px;
+}
+
+.back .modal-add-news > .file > input[type="file"] {
+  display: none;
+}
+
+.back .modal-add-news > * {
+  margin-bottom: 10px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.incorrect {
+  color: #241111 !important;
+  background-color: rgba(218, 123, 123, 0.3) !important;
+}

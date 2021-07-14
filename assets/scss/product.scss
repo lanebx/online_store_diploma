@@ -1,0 +1,76 @@
+
+$baseColorIcon: rgb(131, 131, 131);
+$hoverColorIcon: rgb(143, 143, 143);
+$baseColorText: rgb(131, 131, 131);
+$baseBgColor: rgb(255, 255, 255);
+
+
+
+nav{
+    a:hover {
+    padding: 0.5px;
+    transition-duration:0.30s;
+    }
+}
+
+.items {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+
+    >.item {
+        width: 400px;
+        height: 600px;
+        //background-color: lightgray;
+        margin-bottom: 30px;
+        overflow: hidden;
+
+        .images {
+            height: 600px;
+                >img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                }
+            
+        }
+
+        .button{
+            margin-top: 30px;
+        }
+        .caption {
+            //text-align: center;
+            margin-top: 40px;
+            font-size: 30px;
+            color: rgb(94, 94, 94);
+        }
+
+        .prise {
+            //text-align: center;
+            color: rgb(94, 94, 94);
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        .article{
+            //text-align: center;
+            color: rgb(94, 94, 94);
+            font-size: 1px;
+            margin-top: 10px;
+        }
+
+        .aboutProd{
+            margin-top: 40px;
+            color: rgb(94, 94, 94);
+            //font-family: monospace;
+            white-space: normal;
+        }
+        
+    }
+}
+
+
+.footer{
+    margin-top: 40px;
+}

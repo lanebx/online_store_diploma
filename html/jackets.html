@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Иконки бесплатные перейти поссылке, обновить  
+  https://icomoon.io/app/#/select/font-->
+  <!-- <link rel="stylesheet" href="https://i.icomoon.io/public/temp/5d3ac423f8/UntitledProject/style.css">   -->
+
+  <link rel="stylesheet" href="assets\icon\icomoon\fonts">
+  <link rel="stylesheet" href="assets\css\main.css">
+  <link rel="stylesheet" href="assets\css\about.css">
+  <link rel="stylesheet" href="assets\icon\icomoon\style.css">
+  {{if eq .Admin true}}
+  <link rel="stylesheet" href="/assets/css/admin.css">
+  {{end}}
+
+</head>
+
+<body>
+
+  <header>
+    <div class="header">
+      <div class="menu">
+        <nav>
+          <ul class="topmenu">
+            <li><a href="" class="disabled"><i class="icon-menu"></i></a>
+              <ul class="submenu">
+                <li><a href="/catalog">Каталог</a></li>
+                <li><a href="/news">Новини</a></li>
+                <li><a href="/contacts">Контакти</a></li>
+                <li><a href="/delivery">Доставка</a></li>
+                <li><a href="/return">Повернення</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="name">
+        <a href="http://127.0.0.1:8400/">
+          <i class="icon-linenO-1"></i>
+          <span>Linen</span>
+        </a>
+      </div>
+
+      <div class="1"></div>
+
+      <div class="cart">
+        <i class="icon-cart"></i>
+        {{if eq .IsLogin true}}
+        <i onclick="CookiesDelete()" class="icon-exit"></i>
+        {{else}}
+        <i onclick="OpenLoginWindow()" class="icon-user">🠔</i>
+        {{end}}
+      </div>
+    </div>
+
+    </div>
+  </header>
+
+  <div class="content">
+    <nav>
+      {{range $_, $e := .Category}}
+      <a href="/{{$e.Name}}">{{$e.Name}}</a>
+      {{end}}
+    </nav>
+
+    <main>
+
+      <div class="title">Жакети</div>
+      <div class="items">
+        {{range $_, $e := .Products}}
+        {{if eq $e.Category "Жакети"}}
+        <div class="item">
+          <div class="images">
+            <a href="product/{{$e.Articute}}">
+              <img src="fotoProd/{{$e.Image}}" alt="Изображение товара">
+            </a>
+          </div>
+          <div class="op">
+            <div class="caption">{{$e.Name}}</div>
+            <div class="prise">{{$e.Prise}} грн.</div>
+          </div>
+        </div>
+        {{end}}
+        {{end}}
+      </div>
+    </main>
+  </div>
+
+  <footer>
+    <div class="footer">
+      <div class="footer-menu">
+        <div class="footer-container">
+          <ul>
+              <li><a href="/catalog">Каталог</a></li>
+              <li><a href="/news">Новини</a></li>
+              <li><a href="/contacts">Контакти</a></li>
+              <li><a href="/delivery">Самовивіз і доставка</a></li>
+              <li><a href="/return">Повернення товару</a></li>
+          </ul>
+          <p > Linen Store  </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/script.js"></script>
+  {{if eq .Admin true}}
+  <script src="/assets/js/admin.js"></script>
+  {{end}}
+
+  
+</body>
+
+</html>
